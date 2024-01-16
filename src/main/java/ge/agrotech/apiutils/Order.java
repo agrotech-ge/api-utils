@@ -11,4 +11,8 @@ public class Order {
     private String field;
     private String direction;
 
+    public Order(Sort.Order springOrder) {
+        this.field = springOrder.getProperty();
+        this.direction = springOrder.getDirection().name();
+    }
 }
