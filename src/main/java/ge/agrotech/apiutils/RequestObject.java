@@ -3,7 +3,6 @@ package ge.agrotech.apiutils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -23,9 +22,11 @@ public class RequestObject<T> implements Serializable {
     private List<Order> orders;
     private T data;
 
+
     public ActionPerformer getPerformer() {
         return performer == null ? performer = new ActionPerformer() : performer;
     }
+
 
     public boolean checkRequiredFields(RequestMethodType type) {
 
